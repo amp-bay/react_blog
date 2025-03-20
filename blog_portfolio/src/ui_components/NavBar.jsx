@@ -5,8 +5,15 @@ import { useState } from "react";
 import MobileNavBar from "./MobileNavBar";
 
 
-function NavBar({darkMode,handleDarkMode} ) {
+function NavBar({darkMode,handleDarkMode,isAuthenticated,username,setUsername,setIsAuthenticated} ) {
   const [showNavBar, setShowNavBar]=useState(false)
+
+  function handleLogout(){
+    localStorage.removeItem("access")
+    localStorage.removeItem("refresh")
+    setUsername(false)
+    setIsAuthenticated(false)
+  }
 
   return (
     <>
@@ -25,17 +32,35 @@ function NavBar({darkMode,handleDarkMode} ) {
 
         <ul className=" flex items-center  justify-end gap-9 text-[#3B3C4A] lg:flex-1 max-md:hidden dark:text-[#FFFFFF]">
           
+            
+          
+      
+          {isAuthenticated ? 
+          (<>
             <li>
-              <NavLink to='/detail' className={({isActive})=> isActive? "active": ""}>
-                Hey B,
+              <NavLink to={`/profile/${username}`} className={({isActive})=> isActive? "active": ""}>
+                Hey {username} !
               </NavLink>
             </li>
+            <li><NavLink to="/" onClick={handleLogout} className={({ isActive }) => (isActive ? "active" : "")}> LogOut</NavLink></li>
+            
+          </>)
+           :
+          (<> 
+            <li><NavLink to="/login" className={({ isActive }) => (isActive ? "active" : "")}> Login</NavLink></li>
+            <li>
+              <NavLink to="/signup" className={({ isActive }) => (isActive ? "active" : "")}>Register</NavLink> 
+            </li>
+          </>)
+          }   
           
-          
-          <li>Logout</li>
-          <li>Login</li>
-          <li>Register</li>
-          <li  className="font-semibold">post Something</li>
+
+          <li  className="font-semibold">
+            <NavLink to='/create'>
+              Post Something
+            </NavLink>
+          </li>
+
         </ul>
 
         
@@ -47,7 +72,7 @@ function NavBar({darkMode,handleDarkMode} ) {
         
     </nav>
 
-    {showNavBar && <MobileNavBar/>}
+    {showNavBar && <MobileNavBar isAuthenticated={isAuthenticated} username={username} setUsername={setUsername} setIsAuthenticated={setIsAuthenticated} handleLogout={handleLogout}  />}
   </>
   )
 }

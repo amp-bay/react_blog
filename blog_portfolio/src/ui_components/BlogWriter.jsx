@@ -1,28 +1,35 @@
-import pic from "../images/profile.jpeg"
-const BlogWriter = () => {
+import { BASE_URL } from "@/api"
+import { formatDate } from "@/services/formatDate"
+import { Link } from "react-router-dom"
+
+
+const BlogWriter = ({Blogs}) => {
   return (
-    <div className="flex items-center gap=4 ">
+    <Link to={`/profile/${Blogs.author.username}`}>
+      <div className="flex items-center gap=4 ">
 
-      
-      <span className="flex items-center gap-2">
-        <div className="w-[40px] h-[40px] rounded-full overflow-hidden">
-          <img
-            src={pic}
-            className="c rounded-full w-full h-full object-cover"
-          />
-        </div>
+        
+        <span className="flex items-center gap-2">
+          <div className="w-[40px] h-[40px] rounded-full overflow-hidden">
+            <img
+              src={`${BASE_URL}${Blogs.author.profile}`}
+              className="c rounded-full w-full h-full object-cover"
+            />
+          </div>
 
-        <small className="text-[#696A75] text-[14px]">
-          John Doe
+          <small className="text-[#696A75] text-[14px]">
+            {Blogs.author.first_name} {Blogs.author.last_name}
+          </small>
+        </span>
+
+        <small className="text-[#696A75] text-[14px] ml-3">
+          {/* {Blogs.published_time} */}
+          {formatDate(Blogs.published_time)}
         </small>
-      </span>
-
-      <small className="text-[#696A75] text-[14px] ml-3">
-        12 November, 2024
-      </small>
 
 
-    </div>
+      </div>
+    </Link>
   )
 }
 

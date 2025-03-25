@@ -19,18 +19,7 @@ function App() {
   const [username,setUsername]=useState(null)
   const [isAuthenticated,setIsAuthenticated]=useState(false)
 
-  // const query=useQuery({
-  //   queryKey:["username"],
-  //   queryFn:getUsername
-  // })
-  // console.log(query.data?.username)
-  // useEffect(()=>{
-  //   if(query.data?.username){
-  //     setUsername(query.data.username)
-  //     setIsAuthenticated(true)
-  //   }
-  // },[query.data?.username])
-
+ 
 
   const { data } = useQuery({
     queryKey: ["username"],

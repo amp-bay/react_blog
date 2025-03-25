@@ -50,8 +50,10 @@ const LoginPage = ({setIsAuthenticated,setUsername}) => {
   return (
     <form
         onSubmit={handleSubmit(onSubmit)}
-        className="md:px-16 px-8 py-6 flex flex-col mx-auto my-9 
+        className="md:px-16 px-8 py-6   flex flex-col mx-auto my-9 
         items-center gap-4 w-fit rounded-lg bg-[#FFFFFF] shadow-xl 
+        
+        
         dark:text-white dark:bg-[#141624]"
     >
         <div className="flex flex-col gap-2 justify-center items-center mb-2">
@@ -105,7 +107,7 @@ const LoginPage = ({setIsAuthenticated,setUsername}) => {
                 {mutation.isPending? <TextSpinner text="Signing up" /> :<small className="text-[16px]">Signin</small>
 }
             </button>
-            <p className="text-[14px]">
+            <p className="text-[14px]  mb-20">
                 Don't have an account? <Link to="/signup">signup</Link>
             </p>
         </div>

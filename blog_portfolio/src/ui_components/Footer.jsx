@@ -1,80 +1,56 @@
-import { FaInstagram } from "react-icons/fa";
-import { FaFacebookF } from "react-icons/fa";
-import { BsTwitterX } from "react-icons/bs";
-import { FaYoutube } from "react-icons/fa";
-import { CiMail } from "react-icons/ci";
-
+import React from 'react';
+import { GoArrowUpRight } from "react-icons/go";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#F6F6F7] padding-x py-16 max-container dark:bg-[#141624]">
-    <div className=" flex max-lg:gap-9 lg:gap-4 flex-wrap max-md:justify-center justify-between">
-      <div className="w-[300px] flex flex-col gap-6 max-md:items-center">
-        <h1 className="text-[#141624] text-2xl dark:text-[#FFFFFF] ">
-          G-Friends
-        </h1>
-
-        <p className="text-[14px] text-[#696A75] leading-[1.5]  max-md:text-center dark:text-[#97989F]">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-          ad minim veniam
-        </p>
-      </div>
-
-      <div className="text-[#181A2A] text-[14px] flex flex-col gap-4 px-4 max-md:items-center">
-        <p className=" font-semibold text-[16px] dark:text-white">
-          Quick Links
-        </p>
-        <ul className="flex flex-col gap-4  text-[#3B3C4A] max-md:items-center dark:text-[#97989F]">
-          <li>Home</li>
-          <li>About</li>
-          <li>Blog</li>
-          <li>Archived</li>
-          <li>Author</li>
-          <li>Contact</li>
-        </ul>
-      </div>
-
-      <div className="text-[#181A2A] text-[14px] flex flex-col gap-4 px-4 max-md:items-center">
-        <p className=" font-semibold text-[16px] dark:text-white">Category</p>
-        <ul className="flex flex-col gap-4  text-[#3B3C4A] max-md:items-center dark:text-[#97989F]">
-          <li>Lifestyle</li>
-          <li>Technology</li>
-          <li>Travel</li>
-          <li>Business</li>
-          <li>Economy</li>
-          <li>Sports</li>
-        </ul>
-      </div>
-
-      <div className="bg-white w-[350px] px-6 flex flex-col items-center justify-center gap-2  rounded-lg dark:bg-[#242535] py-6">
-        <h3 className="font-semibold text-xl  dark:text-white">
-          Weekly Newsletter
-        </h3>
-        <p className="text-[#696A75] text-[16px] mb-5 dark:text-[#97989F]">
-          Get blog articles and offers via email
-        </p>
-        <div className="w-full relative">
-          <input
-            placeholder="Your Email"
-            className="border border-[#DCDDDF] rounded-sm h-[40px] px-3 py-3 w-full text-[14px] dark:bg-[#181A2A] "
-          />
-          <CiMail className="absolute top-[12px] right-[10px] text-[16px] dark:text-[#97989F]" />
+    <div className="bg-[#f7f7fa] padding-x py-16 max-container rounded dark:bg-[#141624]">
+      <div className=''>
+        <div className='border-b-2 border-b-[#FAFBFC]'>
+          <p className='pb-8 max-md:pb-7 text-[56px] max-md:text-[40px] max-md:leading-[52px] max-md:px-6 max-md:text-center font-normal text-[#000000] dark:text-[#FFFFFF]'>
+            Let’s Connect.
+          </p>
         </div>
-        <button className="bg-[#4B6BFB] text-[#FFFFFF] text-[16px] rounded-md w-full py-3">
-          Subscribe
-        </button>
+        <div>
+          <div className='mt-16 max-md:mt-10'>
+            <div className='flex max-lg:flex-col'>
+              <div className='pr-[120px] max-md:pr-0 max-md:flex-col'>
+                <p className='font-bold text-xs max-md:leading-4 max-md:text-center mb-3 text-[#4A4A4A] dark:text-[#B3B3B3] capitalize'>For networking</p>
+                <p className='font-bold text-xs mb-3 text-[#000000] dark:text-[#E6E6E6] max-md:mb-16 capitalize'>
+                  <a className='flex items-center max-md:justify-center max-md:items-center' href='https://www.linkedin.com' target='_blank' rel='noopener noreferrer'>
+                    Linkedin <GoArrowUpRight />
+                  </a>
+                </p>
+              </div>
+              <div className='pr-[120px] max-md:pr-0 max-md:flex-col'>
+                <p className='font-bold text-xs max-md:leading-4 max-md:text-center mb-3 text-[#4A4A4A] dark:text-[#B3B3B3] capitalize'>For SOCIALS</p>
+                <p className='font-bold text-xs mb-3 text-[#000000] dark:text-[#E6E6E6] capitalize max-md:mb-16'>
+                  <a className='flex items-center max-md:justify-center max-md:items-center' href='https://twitter.com' target='_blank' rel='noopener noreferrer'>
+                    Twitter <GoArrowUpRight />
+                  </a>
+                </p>
+              </div>
+              <div className='pr-[120px] max-md:pr-0 max-md:flex-col'>
+                <p className='font-bold text-xs max-md:leading-4 max-md:text-center mb-3 text-[#4A4A4A] dark:text-[#B3B3B3] capitalize'>For UPDATES</p>
+                <p className='font-bold text-xs mb-3 text-[#000000] dark:text-[#E6E6E6] capitalize max-md:mb-16'>
+                  <a className='flex items-center max-md:justify-center max-md:items-center' href='https://github.com' target='_blank' rel='noopener noreferrer'>
+                    GitHub <GoArrowUpRight />
+                  </a>
+                </p>
+              </div>
+              <div className='ml-auto max-md:ml-0 flex max-md:flex-col'>
+                <p className='text-[#4A4A4A] dark:text-[#B3B3B3] capitalize max-md:text-xs max-md:leading-4 mr-2 max-md:text-center'>
+                  ALL RIGHTS RESERVED © COPYRIGHT  
+                </p>
+                <p className='text-[#4A4A4A] dark:text-[#B3B3B3] capitalize font-bold max-md:text-xs max-md:leading-4 max-md:flex max-md:text-center max-md:justify-center'>
+                  ADEBAYO CHARLES AMPITAN <span className='font-normal text-[#4A4A4A] dark:text-[#B3B3B3] max-md:ml-1'> 2023.</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
+  );
+};
 
-    <div className="py-3 flex items-center gap-6 cursor-pointer max-md:mt-6 max-md:justify-center">
-      <FaInstagram className="dark:text-white text-[20px] text-[#141624]" />
-      <FaFacebookF className="dark:text-white text-[20px] text-[#141624]" />
-      <BsTwitterX className="dark:text-white text-[20px] text-[#141624]" />
-      <FaYoutube className="dark:text-white text-[20px] text-[#141624]" />
-    </div>
-  </footer>
-  )
-}
-
-export default Footer
+export default Footer;

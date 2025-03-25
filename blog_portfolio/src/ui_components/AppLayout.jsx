@@ -23,9 +23,11 @@ function AppLayout({isAuthenticated ,username,setUsername,setIsAuthenticated}) {
   return (
 
     <div className={darkMode?' dark' : ''}>
-        <main className='w-full bg-[#FFFFFF] dark:bg-[#181A2A]'>
+        <main className='w-full   bg-[#FFFFFF] dark:bg-[#181A2A]'>
             <NavBar setUsername={setUsername} username={username} isAuthenticated={isAuthenticated} darkMode={darkMode} handleDarkMode={handleDarkMode}/>
-            <Outlet/>
+            <div className=" max-container border-x border-gray-100 rounded dark:border-x dark:border-black ">
+              <Outlet />
+            </div>
             <Footer/>
             <ToastContainer />
         </main>

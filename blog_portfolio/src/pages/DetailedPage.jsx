@@ -95,7 +95,7 @@ const DetailPage = ({isAuthenticated, username}) => {
         <BlogWriter Blogs={Blogs}/>
 
         <div className="w-full h-[350px] my-9 overflow-hidden rounded-sm">
-          <img className="w-full h-full object-cover rounded-sm" src={`${BASE_URL}${Blogs.thumbnail}`} />
+          <img className="w-full h-full object-center rounded-sm" src={`${BASE_URL}${Blogs.thumbnail}`} />
         </div>
         <p className="text-[16px] leading-[2rem] text-justify text-[#3B3C4A] dark:text-[#BABABF]">
 

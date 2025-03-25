@@ -17,9 +17,9 @@ function NavBar({darkMode,handleDarkMode,isAuthenticated,username,setUsername,se
 
   return (
     <>
-      <nav className="max-container padding-x py-6 flex justify-between items-center  gap-6 sticky top-0 z-10 bg-[#FFFFFF] dark:bg-[#141624]" >
+      <nav className="max-container padding-x py-6 flex justify-between items-center  gap-6 sticky top-0 z-10 rounded bg-[#f7f7fa]  dark:bg-[#141624]" >
         <Link to="/" className="text-[#141624] text-2xl dark:text-[#FFFFFF]" >
-          G-Friends
+          Dev Spot
         </Link>
         {/* <Link to="/" className="text-[#141624] text-2xl dark:text-[#FFFFFF]">
           DevFolio

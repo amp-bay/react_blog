@@ -144,3 +144,7 @@ scroll-behavior: smooth;
     @apply border-border;}
 body {
     @apply bg-background text-foreground;}} 
+
+*{
+    /* border:2px solid red */
+}

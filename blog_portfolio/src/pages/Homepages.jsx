@@ -22,9 +22,7 @@ const HomePage = () => {
   
   const countNumber=data?.count
   const numOfPages = Math.ceil(data?.count / numOfBlogsPerPage);
-  // console.log(numOfPages +"helo")
-  // console.log(countNumber +' '+'count')
-  // console.log("number oooo",blogs)
+
 
   function handleSetPage(val) {
     setPage(val);
@@ -40,7 +38,7 @@ const HomePage = () => {
 
   return (
     <>
-      <Header blogs={blogs} />
+      <Header isPending={isPending} error={error} isError={isError} blogs={blogs} />
       <BlogContainer className='border-2 border-red-600' isPending={isPending} blogs={blogs} />
       <PaginationPage
         increasePageValue={increasePageValue}
